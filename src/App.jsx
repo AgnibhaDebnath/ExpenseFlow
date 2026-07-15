@@ -1,11 +1,19 @@
-
-import DashBoard from "./Pages/DashBoard"
+import { Routes, Route } from "react-router";
+import Home from "./Pages/Home"
+import NotFound from "./Pages/NotFound"
+import Signup from "./Pages/Signup";
 function App() {
 
 
   return (
     <>
-      <DashBoard />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+
     </>
   )
 }
